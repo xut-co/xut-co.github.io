@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="lang" content="es" />
+<meta name="copyright" content="Recetas de rechupete" />
+<meta http-equiv="Cache-Control" content="max-age=604800" />
+<meta property="fb:app_id" content="173302626060439" />
+<meta name="p:domain_verify" content="f4df72493385ac90eb712c1280e48824"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<link rel="image_src" href="https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg"></link>
+	<meta name="thumbnail" content="https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg"/>
+	
+	
+<script>
+        ( function() {
+          var insertAdsByGoogleJs = function() {
+            var element = document.createElement('script');
+            element.dataset.adClient = 'ca-pub-5565720241615247';
+            element.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            element.async = true;
+            element.type = 'text/javascript';
+            document.getElementsByTagName('head')[0].appendChild(element);
+          };
+          // Run this in an interval (every 0.1s) just in case we are still waiting for consent
+          var cnt = 0;
+          var consentSetInterval = setInterval(function(){
+            cnt += 1;
+            // Bail if we have not gotten a consent response after 60 seconds.
+            if( cnt === 600 )
+              clearInterval(consentSetInterval);
+            if( typeof window.__tcfapi !== 'undefined' ) { // Check if window.__tcfapi has been set
+              clearInterval( consentSetInterval );
+              window.__tcfapi( 'addEventListener', 2, function( tcData,listenerSuccess ) {
+                if ( listenerSuccess ) {
+                  if( tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete' ) {
+                    if ( !tcData.gdprApplies ) {
+                      // GDPR DOES NOT APPLY
+                      // Insert adsbygoogle.js onto the page.
+                      insertAdsByGoogleJs();
+                    }
+                    else {
+                      // GDPR DOES APPLY
+                      // Purpose 1 refers to the storage and/or access of information on a device.
+                      var hasStoreOnDeviceConsent = tcData.purpose.consents[1] || false;
+
+                      if (hasStoreOnDeviceConsent) {
+                      	insertAdsByGoogleJs();
+                      }
+                    }
+                  }
+                }
+              } );
+            }
+            cnt++;
+          }, 100);
+        })();
+</script>
+	
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', '3f83_nKWrGcth', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+
+<title>Berenjenas rebozadas, crujientes y deliciosas. Receta saludable.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="Recetas de rechupete RSS Feed" href="https://www.#/feed/" />
+<link rel="pingback" href="https://www.#/xmlrpc.php" />
+<link rel="Shortcut Icon" href="derechupete/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="derechupete/style.css@1618912697.css" type="text/css" media="screen, projection" />
+<link rel="sitemap" href="https://www.#/sitemap_index.xml" />
+
+<!-- Principio COMSCORE -->
+<script> 
+ var _comscore = _comscore || [];
+ _comscore.push({ c1: "2", c2: "7715761", cs_ucfr: "1" });
+
+ (function() {
+ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+ s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+ el.parentNode.insertBefore(s, el);
+ })();
+ </script>
+ <noscript><img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=7715761&amp;cs_ucfr=1&amp;cv=2.0&amp;cj=1" /></noscript>
+ <!-- Fin COMSCORE -->
+	
+<script data-mrf-script="garda" data-mrf-dt="1" data-mrf-host="live.mrf.io" data-mrf-ct="article" src="https://live.mrf.io/statics/marfeel/gardac-sync.js" data-cfasync="false"></script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v17.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Cómo hacer berenjenas rebozadas perfectas. Receta de unas berenjenas crujientes y fritas deliciosas siguiendo nuestro paso a paso." />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Berenjenas rebozadas, crujientes y deliciosas. Receta saludable." />
+	<meta property="og:description" content="Cómo hacer berenjenas rebozadas perfectas. Receta de unas berenjenas crujientes y fritas deliciosas siguiendo nuestro paso a paso." />
+	<meta property="og:url" content="https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/" />
+	<meta property="og:site_name" content="Recetas de rechupete" />
+	<meta property="article:publisher" content="https://www.facebook.com/recetasderechupetefanpage" />
+	<meta property="article:published_time" content="2021-08-13T14:02:17+00:00" />
+	<meta property="article:modified_time" content="2021-08-16T17:57:59+00:00" />
+	<meta property="og:image" content="https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg" />
+	<meta property="og:image:width" content="1400" />
+	<meta property="og:image:height" content="966" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@derechupete" />
+	<meta name="twitter:site" content="@derechupete" />
+	<meta name="twitter:label1" content="Escrito por" />
+	<meta name="twitter:data1" content="Alfonso" />
+	<meta name="twitter:label2" content="Tiempo de lectura" />
+	<meta name="twitter:data2" content="4 minutos" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.#/#organization","name":"Recetas de rechupete","url":"https://www.#/","sameAs":["https://www.facebook.com/recetasderechupetefanpage","https://instagram.com/derechupete/","https://www.youtube.com/user/recetasderechupete","https://www.pinterest.es/derechupete/","https://twitter.com/derechupete"],"logo":{"@type":"ImageObject","@id":"https://www.#/#logo","inLanguage":"es","url":"https://www.#/wp-content/uploads/2016/03/logo_movil.png","contentUrl":"https://www.#/wp-content/uploads/2016/03/logo_movil.png","width":131,"height":34,"caption":"Recetas de rechupete"},"image":{"@id":"https://www.#/#logo"}},{"@type":"WebSite","@id":"https://www.#/#website","url":"https://www.#/","name":"Recetas de rechupete","description":"Recetas de cocina caseras y f\u00e1ciles","publisher":{"@id":"https://www.#/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.#/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es"},{"@type":"ImageObject","@id":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/#primaryimage","inLanguage":"es","url":"https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg","contentUrl":"https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg","width":1400,"height":966},{"@type":"WebPage","@id":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/#webpage","url":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/","name":"Berenjenas rebozadas, crujientes y deliciosas. Receta saludable.","isPartOf":{"@id":"https://www.#/#website"},"primaryImageOfPage":{"@id":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/#primaryimage"},"datePublished":"2021-08-13T14:02:17+00:00","dateModified":"2021-08-16T17:57:59+00:00","description":"C\u00f3mo hacer berenjenas rebozadas perfectas. Receta de unas berenjenas crujientes y fritas deliciosas siguiendo nuestro paso a paso.","breadcrumb":{"@id":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/#breadcrumb"},"inLanguage":"es","potentialAction":[{"@type":"ReadAction","target":["https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/"]}]},{"@type":"BreadcrumbList","@id":"https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.#/"},{"@type":"ListItem","position":2,"name":"Recetas por tipo","item":"https://www.#/todas/recetas/"},{"@type":"ListItem","position":3,"name":"Recetas de ensaladas y verduras","item":"https://www.#/todas/recetas/ensaladas-verduras/"},{"@type":"ListItem","position":4,"name":"C\u00f3mo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas"}]},{"@type":"Person","@id":"https://www.#/#/schema/person/3701eebd8efa288d32fe0725942368fd","name":"Alfonso","sameAs":["https://www.#"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='https://www.#/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Recetas de rechupete &raquo; Comentario Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas del feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.#\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.1"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='dist/block-library/style.min.css@ver=5.8.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rating-form-cyto-css'  href='rating-form/assets/css/cyto.css@ver=1.5.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rating-form-css'  href='rating-form/assets/css/rating-form.css@ver=1.5.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='aawp-css'  href='aawp/assets/dist/css/main.css@ver=3.16.css' type='text/css' media='all' />
+<script type='text/javascript' src='jquery/jquery.min.js@ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='jquery/jquery-migrate.min.js@ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://www.#/wp-json/" /><link rel="alternate" type="application/json" href="https://www.#/wp-json/wp/v2/posts/42601" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.#/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.#/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.#/?p=42601' />
+<link rel="alternate" type="application/json+oembed" href="https://www.#/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.#%2Fcomo-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas%2F42601%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.#/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.#%2Fcomo-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas%2F42601%2F&#038;format=xml" />
+<style type="text/css">.aawp .aawp-tb__row--highlight{background-color:#f5f7f7;}.aawp .aawp-tb__row--highlight{color:#175781;}.aawp .aawp-tb__row--highlight a{color:#175781;}</style><link rel="amphtml" href="amp/index.html">
+
+</head><body data-rsssl=1 >
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK67NG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TK67NG');</script>
+<!-- End Google Tag Manager -->
+
+<div class="rdr-content">	
+    <div class="rdr-top pure-g" role="banner">
+    	<a href="https://www.#/" title="Inicio" class="rdr-brand pure-u-1-3 pure-u-lg-1-5">
+		        <h2><img src="derechupete/img/logo.svg" alt="Recetas de rechupete"><span>Recetas de rechupete</span></h2>
+                </a>
+        <form class="rdr-searchform pure-u-2-3 pure-u-lg-4-5" role="search" method="get" action="https://www.#/" id="searchrecipes"><input type="search" name="s" id="query-input" placeholder="Busca recetas"><input type="submit" value="Buscar"></form>
+
+<div class="rdr-mainmenu pure-u-1"><ul id="menu-principal" class="menu" role="navigation" ><li id="menu-item-17335" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17335"><a href="index.html#">Recetas de&#8230;</a>
+<ul class="sub-menu">
+	<li id="menu-item-17336" class="nav-postres menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17336"><a title="Recetas de postres y dulces" href="https://www.#/todas/recetas/postres-dulces/">Postres y dulces</a></li>
+	<li id="menu-item-17337" class="nav-pescado menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17337"><a title="Recetas de pescado y marisco" href="https://www.#/todas/recetas/pescados-mariscos/">Pescado y marisco</a></li>
+	<li id="menu-item-17338" class="nav-carne menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17338"><a title="Recetas de carnes y aves" href="https://www.#/todas/recetas/carnes-aves/">Carnes, pollo y otras aves</a></li>
+	<li id="menu-item-17346" class="nav-arroz menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17346"><a title="Recetas de arroz" href="https://www.#/todas/recetas/arroces/">Arroz</a></li>
+	<li id="menu-item-17345" class="nav-pasta menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17345"><a title="Recetas de pasta" href="https://www.#/todas/recetas/pasta-recetas/">Pasta</a></li>
+	<li id="menu-item-17339" class="nav-verduras menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-17339"><a title="Recetas de ensaladas y verduras" href="https://www.#/todas/recetas/ensaladas-verduras/">Ensaladas y verduras</a></li>
+	<li id="menu-item-17340" class="nav-tapas menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-17340"><a title="Recetas de ensaladas y verduras" href="https://www.#/todas/recetas/tapas-aperitivos-pinchos/">Tapas y aperitivos</a></li>
+	<li id="menu-item-43555" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43555"><a href="https://www.#/todas/recetas/recetas-de-sopas-y-caldos/">Sopas, caldos y cremas</a></li>
+	<li id="menu-item-17342" class="nav-sopas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17342"><a title="Recetas de guisos y legumbres" href="https://www.#/todas/recetas/legumbres-sopas-guisos/">Legumbres y guisos</a></li>
+	<li id="menu-item-17343" class="nav-masas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17343"><a title="Recetas de masas y rebozados" href="https://www.#/todas/recetas/masas-rebozados/">Pan, masas y rebozados</a></li>
+	<li id="menu-item-17344" class="nav-patatas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17344"><a title="Recetas de patatas, salsas y guarniciones" href="https://www.#/todas/recetas/patatas-salsas-guarniciones/">Patatas, salsas y guarniciones</a></li>
+	<li id="menu-item-17341" class="nav-especial menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17341"><a title="Recetas para ocasiones especiales" href="https://www.#/todas/recetas/ocasiones-especiales/">Para ocasiones especiales</a></li>
+	<li id="menu-item-17347" class="nav-bebidas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17347"><a title="Recetas de bebidas, cócteles y licores" href="https://www.#/todas/recetas/bebidas-cocteles-licores/">Bebidas, cócteles y licores</a></li>
+</ul>
+</li>
+<li id="menu-item-27898" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27898"><a href="https://www.#/todas/trucos-de-cocina/">Aprende a cocinar</a></li>
+<li id="menu-item-18586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18586"><a href="https://www.#/recetas-de-pollo/">Recetas de pollo</a></li>
+<li id="menu-item-27899" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27899"><a href="https://www.#/todas/general/">Actualidad gastronómica</a></li>
+<li id="menu-item-35282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35282"><a href="https://www.#/recetas-faciles/">Recetas fáciles y baratas</a></li>
+</ul></div></div>    
+</div>
+<p id="breadcrumbs"><span><span><a href="https://www.#/">Inicio</a> » <span><a href="https://www.#/todas/recetas/">Recetas por tipo</a> » <span><a href="https://www.#/todas/recetas/ensaladas-verduras/">Recetas de ensaladas y verduras</a> » <span class="breadcrumb_last" aria-current="page">Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas</span></span></span></span></span></p>
+
+<script type="application/ld+json" id="recipejson">
+	{
+		"@context": "http://schema.org",
+		"@type": "Recipe",
+		"mainEntityOfPage": {"@id": "https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/"},
+		"author":{"@id":"https://www.#/#organization"},
+		"totalTime": "PT30M",
+		"datePublished": "2021-08-13",
+		"description": "Cómo hacer berenjenas rebozadas perfectas. Receta de unas berenjenas crujientes y fritas deliciosas siguiendo nuestro paso a paso.",
+		"image": "https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg",
+		"recipeIngredient": [ "2 berenjenas medianas", "2 huevos M", "Harina de trigo de todo uso (si hay celiacos en casa, se puede sustituir por harina sin gluten)", "Aceite de oliva virgen extra suave para fritura", "Sal y pimienta negra recién molida (al gusto de cada casa)" ],
+		"name": "Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas",
+		"nutrition": {
+			"@type": "NutritionInformation",
+			"calories": "302"
+		},
+		"recipeInstructions": [
+		{ "@type": "HowToStep", "text": "Lavamos muy bien las berenjenas y las cortamos en rodajas de unos 3 mm de espesor, ni muy finas, ni muy gruesas. Mirad la foto de la recetas, es el corte ideal."},{ "@type": "HowToStep", "text": "En un bol grande ponemos agua con 2 cucharadas de sal gorda colmadas. Vamos a quitar el posible amargor que trae la berenjena. Las ponemos en remojo durante una media hora. Luego las quitamos del agua y las escurrimos muy bien."},{ "@type": "HowToStep", "text": "Lo mejor para quitar definitivamente el amargor (si fuesen berenjenas de huerta, por ejemplo, las de mi tía Anita), es luego meterlas en leche, cerveza o agua con gas otra media. Volver a escurrir y secar bien con papel absorbente."},{ "@type": "HowToStep", "text": "Aunque las que se suelen comprar en supermercado y frutería suelen venir de invernadero y son amargas. A lo mejor por la variedad de berenjena. Yo he probado varias veces el tema del amargor, y sólo me lo encuentro cuando vienen de la huerta de un familiar o amigo. Reservamos para el rebozado."},{ "@type": "HowToStep", "text": "Salpimentamos en una bandeja. Preparamos los ingredientes para el rebozado mientras ponemos una sartén con el aceite de oliva virgen extra suave a calentar. Preparamos 2 recipientes o platos, uno con la harina y el otro con los huevos ligeramente batidos con unas gotas de agua y una pizca de sal. Vamos a hacer todo en cadena, para aprovechar nuestro tiempo."},{ "@type": "HowToStep", "text": "Pasamos primero las rodajas de berenjena por el plato con harina y luego por un bol o plato hondo con el huevo batido (con unas gotas de agua, primer truco, esto hará que se evapore al freír y quede más crujiente). "},{ "@type": "HowToStep", "text": "Cuando el aceite esté bien caliente, a unos 180º C más o menos (no debe humear) vamos añadiendo las rodajas rebozadas de harina y huevo al aceite. Vamos a realizar el proceso por tandas, no queremos poner muchas porque baja la temperatura del aove y es más difícil de manejar."},{ "@type": "HowToStep", "text": "Freímos unos 2 minutos o hasta que estén doradas por lo dos lados. Sacamos y dejamos reposar sobre una rejilla (no sobre papel, pues en él, se van a ablandar, y queremos que queden bien crujientes. "},{ "@type": "HowToStep", "text": "Probamos una y espolvoreamos con sal si fuese necesario cuando todavía estén calientes. Servimos rápido antes de que se enfríen. ¡De rechupete!"},{ "@type": "HowToStep", "text": "También se podrían hacer sólo con harina y no pasarla por huevo, queda más crujiente, al estilo andaluz. Pero tenéis que cortar la berenjena súper fina."},{ "@type": "HowToStep", "text": "Podemos guardar la berenjena rebozada y así frita en el frigorífico hasta cinco días (aunque perderá el crujiente) o incluso congelar dentro de una bolsa de plástico zip o en un recipiente de plástico con tapa hermética hasta 3 meses."},{ "@type": "HowToStep", "text": "Para la fritura perfecta podéis seguir nuestros consejos, pero siempre es bueno tener un termómetro de cocina para medir la temperatura del aceite. "},{ "@type": "HowToStep", "text": "Freír por tandas. Si se ponen muchas rodajas de berenjena a freír a la vez, la temperatura del aceite va a disminuir con lo que las rodajas tardarán más tiempo en freírse y absorberán más aceite."}],
+		"recipeYield": "4",
+		"recipeCategory": "Recetas de ensaladas y verduras",
+		"recipeCuisine": "española",
+		"keywords": "Fácil",
+		"estimatedCost": "0.6€/persona",
+
+		
+		"aggregateRating" : {
+			"@type": "AggregateRating",
+			"ratingValue": "4.3",
+			"reviewCount": "16"
+		}
+	}
+</script>
+
+<div id="container" class="pure-g rdr-content" role="main">
+	<div id="recipe" class="pure-u-1 pure-u-lg-2-3 rdr-flexorden2">
+
+		<article>
+			<section>
+				<header>
+					<h1>
+						Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas					</h1>
+					<div class="rdr-eat">
+					<div>
+					<span class="rdr-tag">Fácil</span><span class="rdr-tag">30 min.</span><span class="rdr-tag">4 pers.</span><div data-rf-id="RF1P42601" class="rating_form_wrap rating_form_1">
+<style type="text/css">.rating_form_1 {text-align:left;}
+.rating_form_1 .rating_form .rf_item {color:#d2dee2;font-size:16px;}
+.rating_form_1 .rating_form .rf_item.hover {color:#b3340d;}
+.rating_form_1 .def {background-color:#f5f7f7;color:#576673;font-size:12px;}
+</style><div class="rating_form cursor user_rating">
+<span data-rating="1" class="rf_item cyto-star hover" title="La odio"></span><span data-rating="2" class="rf_item cyto-star hover" title="No me gusta"></span><span data-rating="3" class="rf_item cyto-star hover" title="Ni fu ni fa"></span><span data-rating="4" class="rf_item cyto-star hover" title="Qué buena pinta"></span><span data-rating="5" class="rf_item cyto-star-half hover" title="¡De rechupete!"></span><span class="rf_side"><span class="def rating_score"><span class="rf_average">4.3</span>/<span class="rf_max">5</span></span><span class="def rating_total"><span class="rf_count">16</span> votos</span></span></div>
+</div>
+					</div>
+					<p class="rdr-author">Por <a href="https://www.#/acercaderecetasderechupete/">Alfonso López</a> <img width="40" height="40" src="2020/11/AlfonsoLopez-768x768.jpg" class="rdr-avatar" alt="Alfonso López Alonso - Cocinero en #" loading="lazy" srcset="https://www.#/wp-content/uploads/2020/11/AlfonsoLopez-768x768.jpg 768w, https://www.#/wp-content/uploads/2020/11/AlfonsoLopez.jpg 800w" sizes="(max-width: 40px) 100vw, 40px" /></p>
+					</div>
+				</header>
+
+				<img width="738" height="509" src="2021/08/Berenjenas-rebozadas-768x530.jpg" class="mainphoto rdr-image wp-post-image" alt="Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas" loading="lazy" srcset="https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas-768x530.jpg 768w, https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg 1400w" sizes="(max-width: 738px) 100vw, 738px" />				
+				<div id="extrainfo">
+					<ul>
+						<li>Precio: <strong>0.6 €/persona</strong></li><li>Calorías por 100g: <strong>302kcal</strong></li><li><a href="https://www.#/todas/recetas/ensaladas-verduras/" rel="category tag">Recetas de ensaladas y verduras</a> · <a href="https://www.#/todas/recetas/tapas-aperitivos-pinchos/" rel="category tag">Recetas de tapas y aperitivos</a></li>					</ul>
+				</div>
+
+				<div id="ingredients">
+					<h2>Ingredientes</h2>
+					<ul>
+						<li>2 berenjenas medianas</li><li>2 huevos M</li><li>Harina de trigo de todo uso (si hay celiacos en casa, se puede sustituir por harina sin gluten)</li><li>Aceite de oliva virgen extra suave para fritura</li><li>Sal y pimienta negra recién molida (al gusto de cada casa)</li>					</ul>
+				</div>
+				
+
+				<div id="description">
+
+
+					
+<p><strong>Prueba también:</strong> <a href="https://www.#/berenjenas-rellenas-de-carne-picada-receta-de-temporada/6158/">Berenjenas rellenas</a> · <a href="https://www.#/berenjenas-al-horno-con-miel/37244/">Berenjenas al horno</a> · <a href="https://www.#/berenjenas-rellenas-de-atun-con-queso-gratinado-al-horno/42592/">Berenjenas rellenas de atún</a> · <a href="https://www.#/receta-de-musaka-o-moussaka-griega/724/">Lasaña de berenjenas</a> · <a href="https://www.#/baba-ganoush-mutabal-o-crema-de-berenjenas-receta-libanesa/5379/">Paté de berenjenas</a> · <a href="https://www.#/berenjenas-fritas-con-miel/37341/">Berenjenas con miel</a> · <a href="https://www.#/berenjenas-a-la-parmesana/12726/">Berenjenas a la parmesana</a> · <a href="https://www.#/berenjenas-rellenas-de-quinoa-y-verduras/24733/">Berenjenas rellenas de verduras</a></p>
+
+
+
+<p>Os presento esta <strong>receta de berenjenas rebozadas</strong> que no podía faltar en el blog, un acompañamiento delicioso, Que en casa solemos comer como aperitivo de alguna comida con alguna <strong>crema tipo hummus</strong> o <strong>mutabal</strong> para untar las berenjenas con ellas.</p>
+
+
+
+<p>Al quedar una berenjena crujiente por fuera es muy fácil de comer, diría que caen como pipas&#8230; siempre de rechupete. Con esta receta conseguiréis unas berenjenas rebozadas con un exterior bien crujiente y apetitoso nada más de verlo, sin olvidarnos de que su interior debe quedar jugoso y suave. Y por supuesto sin amargor característico de la berenjena. Por eso es importante que aunque vayamos a rebozar y freír nada más, sigáis nuestros consejos para que os queden perfectas.</p>
+
+
+
+<p>Las berenjenas pesan muy poco porque tienen una estructura porosa, esto hace que a la hora de freír absorba una gran cantidad de líquido. Para evitar que al freír nos quede gomosa por si entra el aceite es importante un rebozado perfecto y que las berenjenas no queden grasientas. Vamos con la receta de la tía Anita, os quedarán perfectas.</p>
+
+
+
+<h3>Las berenjenas. Antes de rebozar y freír</h3>
+
+
+
+<ol><li>Lavamos muy bien las berenjenas y las cortamos en rodajas de unos 3 mm de espesor, ni muy finas, ni muy gruesas. Mirad la foto de la recetas, es el corte ideal.</li><li>En un bol grande ponemos agua con 2 cucharadas de sal gorda colmadas. Vamos a quitar el posible amargor que trae la berenjena. Las ponemos en remojo durante una media hora. Luego las quitamos del agua y las escurrimos muy bien.</li><li>Lo mejor para quitar definitivamente el amargor (si fuesen berenjenas de huerta, por ejemplo, las de mi tía Anita), es luego meterlas en leche, cerveza o agua con gas otra media. Volver a escurrir y secar bien con papel absorbente.</li><li>Aunque las que se suelen comprar en supermercado y frutería suelen venir de invernadero y son amargas. A lo mejor por la variedad de berenjena. Yo he probado varias veces el tema del amargor, y sólo me lo encuentro cuando vienen de la huerta de un familiar o amigo. Reservamos para el rebozado.</li></ol>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1400" height="966" src="2021/08/Berenjenas-rebozadas-2.jpg" alt="" class="wp-image-42605" srcset="https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas-2.jpg 1400w, https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas-2-768x530.jpg 768w" sizes="(max-width: 1400px) 100vw, 1400px" /></figure>
+
+
+
+<h3>Rebozado, fritura y presentación de las berenjenas</h3>
+
+
+
+<ol><li>Salpimentamos en una bandeja. Preparamos los ingredientes para el rebozado mientras ponemos una sartén con el aceite de oliva virgen extra suave a calentar. Preparamos 2 recipientes o platos, uno con la harina y el otro con los huevos ligeramente batidos con unas gotas de agua y una pizca de sal. Vamos a hacer todo en cadena, para aprovechar nuestro tiempo.</li><li>Pasamos primero las rodajas de berenjena por el plato con harina y luego por un bol o plato hondo con el huevo batido (con unas gotas de agua, primer truco, esto hará que se evapore al freír y quede más crujiente). </li><li>Cuando el aceite esté bien caliente, a unos 180º C más o menos (no debe humear) vamos añadiendo las rodajas rebozadas de harina y huevo al aceite. Vamos a realizar el proceso por tandas, no queremos poner muchas porque baja la temperatura del aove y es más difícil de manejar.</li><li>Freímos unos 2 minutos o hasta que estén doradas por lo dos lados. Sacamos y dejamos reposar sobre una rejilla (no sobre papel, pues en él, se van a ablandar, y queremos que queden bien crujientes. </li><li>Probamos una y espolvoreamos con sal si fuese necesario cuando todavía estén calientes. Servimos rápido antes de que se enfríen. ¡De rechupete!</li></ol>
+
+
+
+<h3>Consejos para unas berenjenas rebozadas perfectas</h3>
+
+
+
+<ul><li>También se podrían hacer sólo con harina y no pasarla por huevo, queda más crujiente, al estilo andaluz. Pero tenéis que cortar la berenjena súper fina.</li><li>Podemos guardar la berenjena rebozada y así frita en el frigorífico hasta cinco días (aunque perderá el crujiente) o incluso congelar dentro de una bolsa de plástico zip o en un recipiente de plástico con tapa hermética hasta 3 meses.</li><li>Para la <strong><a href="https://www.#/el-rebozado-perfecto-si-vas-a-rebozar-hazlo-bien/24635/">fritura perfecta</a></strong> podéis seguir nuestros consejos, pero siempre es bueno tener un termómetro de cocina para medir la temperatura del aceite. </li><li>Freír por tandas. Si se ponen muchas rodajas de berenjena a freír a la vez, la temperatura del aceite va a disminuir con lo que las rodajas tardarán más tiempo en freírse y absorberán más aceite.</li></ul>
+
+
+				</div>
+
+				<div class="rdr-author-bio">
+	<h4>Por <a href="https://www.#/acercaderecetasderechupete/">Alfonso López</a></h4>
+	<p>Empecé # en 2009. En estos años he escrito recetas y libros, grabado vídeos, he dado cursos presenciales y clases en escuelas de hostelería. Y <strong>cocinar para mi familia y amigos</strong> sigue siendo mi gran pasión. En esta web quiero compartir contigo toda mi experiencia, para que disfrutes de la cocina tanto como yo y todos tus platos salgan de rechupete.</p>
+	<p><img width="104" height="104" src="2020/11/AlfonsoLopez-768x768.jpg" class="rdr-img-round-mini" alt="Alfonso López Alonso - Cocinero en #" loading="lazy" srcset="https://www.#/wp-content/uploads/2020/11/AlfonsoLopez-768x768.jpg 768w, https://www.#/wp-content/uploads/2020/11/AlfonsoLopez.jpg 800w" sizes="(max-width: 104px) 100vw, 104px" /></p>
+</div>
+<div id="sharerecipe">
+	<h3>¿Te ha gustado? ¡Compártelo!</h3>
+     <a href="https://www.facebook.com/sharer.php?u=https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/&amp;t=Cómo&#32;hacer&#32;berenjenas&#32;rebozadas&#32;perfectas.&#32;Receta&#32;de&#32;berenjenas&#32;crujientes&#32;y&#32;fritas" rel="nofollow" target="popup" onClick="window.open(this.href, this.target, 'width=600,height=600'); return false;" class="facebookshare sharebig"><i class="icon-facebook"></i> Compartir</a>
+    <a href="https://twitter.com/share?text=Cómo hacer berenjenas rebozadas perfectas. Receta de berenjenas crujientes y fritas&url=https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/&via=derechupete" rel="nofollow" target="popup" onClick="window.open(this.href, this.target, 'width=600,height=600'); return false;" class="twittershare sharebig"><i class="icon-twitter"></i> Twittear</a>
+    <a href="https://pinterest.com/pin/create/link/?url=https://www.#/como-hacer-berenjenas-rebozadas-perfectas-receta-de-berenjenas-crujientes-y-fritas/42601/&amp;media=https://www.#/wp-content/uploads/2021/08/Berenjenas-rebozadas.jpg&amp;description=Cómo&#32;hacer&#32;berenjenas&#32;rebozadas&#32;perfectas.&#32;Receta&#32;de&#32;berenjenas&#32;crujientes&#32;y&#32;fritas" target="popup" onClick="window.open(this.href, this.target, 'width=600,height=600'); return false;" class="pinterestshare sharebig"><i class="icon-pinterest"></i> Pin it</a>
+      <a href="javascript:self.print()" rel="nofollow" title="Imprimir" class="printshare sharebig"><i class="icon-print"></i> Imprimir</a>    
+</div>				
+
+				<div id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="rdr-newsletter rdr-red-pattern">
+<p>Recibe un <a rel="nofollow noopener" href="https://us9.campaign-archive.com/home/?u=4467d9f996aa01ad3d7e6f1a1&#038;id=4f15bf6b9a" title="Ver ejemplos" target="_blank">email semanal</a> con las nuevas recetas y recomendaciones de rechupete.</p>
+<form action="https://recetasderechupete.us9.list-manage.com/subscribe/post?u=4467d9f996aa01ad3d7e6f1a1&amp;id=4f15bf6b9a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<label>Tu email<br />
+<input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="" /></label>
+<label>Tu nombre (opcional)<br />
+<input id="mce-FNAME" class="" name="FNAME" type="text" value="" /></label>
+<label><input type="radio" value="Acepto el tratamiento de mis datos descrito en la política de privacidad" name="MMERGE2" id="mce-MMERGE2-0"> Acepto el tratamiento de mis datos descrito en la <a href="https://www.#/politica-de-cookies/" target="_blank" rel="noopener">política de privacidad</a></label>
+<div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div>
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4467d9f996aa01ad3d7e6f1a1_4f15bf6b9a" tabindex="-1" value=""></div>
+<p><input type="submit" value="Subscribirme" name="subscribe" id="mc-embedded-subscribe"></p>
+</form>
+<script>
+var rdrConsent = document.querySelector('input[id="mce-MMERGE2-0"]');
+var rdrSubmit = document.querySelector('input[id="mc-embedded-subscribe"]');
+rdrSubmit.disabled = true;
+rdrConsent.onchange = function() {
+  if(rdrConsent.checked) {
+    rdrSubmit.disabled = false;
+  } else {
+    rdrSubmit.disabled = true;
+  }
+};
+</script></div>
+<p class="rdr-legal" style="margin-top:1em;">
+Piensa en Pixels S.L como titular de #, usará los datos que proporciones en este formulario únicamente para enviarte las actualizaciones del blog. Tratamos tus datos con respeto. Para más información consulta la <a href="https://www.#/politica-de-cookies/"  rel="noopener">Política de privacidad</a>. Puedes cambiar de opinión en cualquier momento y desuscribirte haciendo clic en el pie de cualquier email que recibas de esta web, o contactando a hola@piensaenpixels.com. Recetas de rechupete usa Mailchimp como plataforma en envío de emails. Mailchimp está acogido al acuerdo EU-US Privacy Shield, aprobado por el Comité Europeo de Protección de Datos. Al enviar este formulario apruebas que tus datos sean transferidos a MailChimp para procesarlos de acuerdo a su <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="nofollow noopener">Política de Privacidad</a>.
+	</p></div></div>
+				<div id="relatedrecipe" role="complementary">
+					<h3>Si te ha gustado esta receta te gustar&aacute;:</h3>
+					<div>
+						<a href="https://www.#/receta-de-musaka-o-moussaka-griega/724/" rel="bookmark" title="Ver Lasaña de berenjenas o musaka griega">
+							<img width="230" height="220" src="2019/09/Musaka-griega-230x220.jpg" class="rdr-img-round-medium wp-post-image" alt="Lasaña de berenjenas o musaka griega" loading="lazy" />							<h4>
+								Lasaña de berenjenas o musaka griega							</h4>
+						</a>
+					
+					</div>
+
+					
+					<div>
+						<a href="https://www.#/baba-ganoush-mutabal-o-crema-de-berenjenas-receta-libanesa/5379/" rel="bookmark" title="Ver Paté de berenjenas o Mutabal">
+							<img width="230" height="220" src="2012/04/baba_ganoush_mutabal-230x220.jpg" class="rdr-img-round-medium wp-post-image" alt="Paté de berenjenas o Mutabal" loading="lazy" />							<h4>
+								Paté de berenjenas o Mutabal							</h4>
+						</a>
+					
+					</div>
+
+					
+					<div>
+						<a href="https://www.#/caponata-siciliana-o-estofado-de-berenjenas/7908/" rel="bookmark" title="Ver Caponata de berenjenas siciliana">
+							<img width="230" height="220" src="2019/10/Caponata-siciliana-230x220.jpg" class="rdr-img-round-medium wp-post-image" alt="Caponata de berenjenas siciliana" loading="lazy" />							<h4>
+								Caponata de berenjenas siciliana							</h4>
+						</a>
+					
+					</div>
+
+					
+				</div>
+
+			</section>
+			<section>
+<div id="recipecomments" class="rdr-double-top"><a name="comments"></a>
+  <h3>Si te ha gustado esta receta o tienes alguna duda de c&oacute;mo hacerla deja un comentario</h3>
+          
+      <ol class="comments">
+      	      </ol>
+ 
+	<div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+		<meta itemprop="interactionType" content="https://schema.org/CommentAction" />
+		<meta itemprop="userInteractionCount" content="0" />
+	</div>
+  
+	        <div id="comments" role="form">                           
+          
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deja una respuesta <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancelar la respuesta</a></small></h3><form action="https://www.#/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentario</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nombre <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Correo electrónico <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Web</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar el comentario" /> <input type='hidden' name='comment_post_ID' value='42601' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="708e2678f5" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js" name="ak_js" value="65"/><script>document.getElementById( "ak_js" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Este sitio usa Akismet para reducir el spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Aprende cómo se procesan los datos de tus comentarios</a>.</p>        
+        </div>
+             
+
+          
+   
+   </div>
+</section>
+		</article>
+	</div>
+
+		<aside class="pure-u-1 pure-u-lg-1-3 rdr-flexorden1">
+<div id="navcontent">
+    
+	<div id="nav_menu-9" class="widget widget_nav_menu"><h3 class="widget-title">Hoy se habla de&#8230;</h3><div class="menu-modulos-hoy-se-habla-de-container"><ul id="menu-modulos-hoy-se-habla-de" class="menu"><li id="menu-item-43678" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43678"><a href="https://www.#/todas/recetas/carnes-aves/recetas-con-pollo/">Recetas con pollo</a></li>
+<li id="menu-item-43679" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43679"><a href="https://www.#/todas/recetas/legumbres-sopas-guisos/recetas-con-garbanzos/">Recetas con garbanzos</a></li>
+<li id="menu-item-43463" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43463"><a href="https://www.#/receta-de-lentejas-caseras-con-chorizo/939/">Lentejas con chorizo</a></li>
+<li id="menu-item-43677" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43677"><a href="https://www.#/receta-de-lentejas-light-al-estilo-tradicional/938/">Lentejas con verduras</a></li>
+<li id="menu-item-43465" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43465"><a href="https://www.#/crema-de-calabaza-y-curry/6628/">Crema de calabaza</a></li>
+<li id="menu-item-43559" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43559"><a href="https://www.#/receta-de-tortitas/11/">Tortitas</a></li>
+<li id="menu-item-39641" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39641"><a href="https://www.#/receta-facil-de-tarta-de-queso/158/">Tarta de queso</a></li>
+<li id="menu-item-42586" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42586"><a href="https://www.#/galletas-de-avena/11370/">Galletas de avena</a></li>
+<li id="menu-item-41939" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-41939"><a href="https://www.#/bizcocho-casero-de-yogur/10463/">Bizcocho de yogur</a></li>
+</ul></div></div><div id="custom_html-5" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="rdr-newsletter rdr-red-pattern">
+	<p>Recibe un email semanal con las nuevas recetas de rechupete.</p>
+	<a href="https://www.#/suscribete-a-recetas-de-rechupete/" class="buttonlink">Suscríbete</a></div></div></div><div id="nav_menu-3" class="widget widget_nav_menu"><h3 class="widget-title">Recetas</h3><div class="menu-recetas-container"><ul id="menu-recetas" class="menu"><li id="menu-item-20176" class="nav-indice menu-item menu-item-type-post_type menu-item-object-page menu-item-20176"><a href="https://www.#/indice-de-recetas/">Recetas por orden alfabético</a></li>
+<li id="menu-item-20159" class="nav-postres menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20159"><a href="https://www.#/todas/recetas/postres-dulces/">Postres y dulces</a></li>
+<li id="menu-item-20170" class="nav-arroz menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20170"><a href="https://www.#/todas/recetas/arroces/">Arroz</a></li>
+<li id="menu-item-20168" class="nav-pasta menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20168"><a href="https://www.#/todas/recetas/pasta-recetas/">Pasta</a></li>
+<li id="menu-item-20161" class="nav-carne menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20161"><a href="https://www.#/todas/recetas/carnes-aves/">Carnes, pollo y otras aves</a></li>
+<li id="menu-item-20160" class="nav-pescado menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20160"><a href="https://www.#/todas/recetas/pescados-mariscos/">Pescado y marisco</a></li>
+<li id="menu-item-20162" class="nav-verduras menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20162"><a href="https://www.#/todas/recetas/ensaladas-verduras/">Ensaladas y verduras</a></li>
+<li id="menu-item-20164" class="nav-sopas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20164"><a href="https://www.#/todas/recetas/legumbres-sopas-guisos/">Legumbres y guisos</a></li>
+<li id="menu-item-43556" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43556"><a href="https://www.#/todas/recetas/recetas-de-sopas-y-caldos/">Sopas, caldos y cremas</a></li>
+<li id="menu-item-20166" class="nav-masas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20166"><a href="https://www.#/todas/recetas/masas-rebozados/">Panes, masas y rebozados</a></li>
+<li id="menu-item-20167" class="nav-patatas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20167"><a href="https://www.#/todas/recetas/patatas-salsas-guarniciones/">Patatas, salsas y guarniciones</a></li>
+<li id="menu-item-20163" class="nav-tapas menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20163"><a href="https://www.#/todas/recetas/tapas-aperitivos-pinchos/">Tapas y aperitivos</a></li>
+<li id="menu-item-20171" class="nav-bebidas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20171"><a href="https://www.#/todas/recetas/bebidas-cocteles-licores/">Bebidas, cócteles y licores</a></li>
+<li id="menu-item-20165" class="nav-especial menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20165"><a href="https://www.#/todas/recetas/ocasiones-especiales/">Para ocasiones especiales</a></li>
+<li id="menu-item-20174" class="nav-tematicas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20174"><a href="https://www.#/todas/recetas-tematicas/">Recetas por temática</a></li>
+<li id="menu-item-20169" class="nav-facil menu-item menu-item-type-post_type menu-item-object-page menu-item-20169"><a href="https://www.#/recetas-faciles/">Recetas fáciles</a></li>
+<li id="menu-item-20956" class="nav-comohacer menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20956"><a href="https://www.#/todas/como-hacer/">Cómo hacer&#8230;</a></li>
+</ul></div></div><div id="nav_menu-4" class="widget widget_nav_menu"><h3 class="widget-title">Aprende a cocinar</h3><div class="menu-aprende-container"><ul id="menu-aprende" class="menu"><li id="menu-item-27900" class="nav-trucos menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27900"><a href="https://www.#/todas/trucos-de-cocina/">Cursos de cocina</a></li>
+<li id="menu-item-27901" class="nav-descargas menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27901"><a href="https://www.#/todas/trucos-de-cocina/recetarios-gratis-descargar/">Imprimibles</a></li>
+<li id="menu-item-27902" class="nav-verduras menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27902"><a href="https://www.#/todas/trucos-de-cocina/ingredientes-alimentos/">Ingredientes y alimentos</a></li>
+<li id="menu-item-28951" class="nav-facil menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28951"><a href="https://www.#/todas/trucos-de-cocina/guias-de-compra-de-menaje/">Utensilios y menaje de cocina</a></li>
+<li id="menu-item-27905" class="nav-indice menu-item menu-item-type-post_type menu-item-object-page menu-item-27905"><a href="https://www.#/calendario-de-temporada/">Productos de temporada</a></li>
+</ul></div></div><div id="nav_menu-5" class="widget widget_nav_menu"><h3 class="widget-title">Cultura gastronómica</h3><div class="menu-general-container"><ul id="menu-general" class="menu"><li id="menu-item-27903" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27903"><a href="https://www.#/todas/general/">Actualidad gastronómica</a></li>
+<li id="menu-item-27904" class="nav-libros menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27904"><a href="https://www.#/todas/libros-de-cocina-y-recetarios/">Libros de cocina</a></li>
+</ul></div></div><div id="media_image-7" class="widget widget_media_image"><a href="https://www.pasta-garofalo.com/es/?utm_source=derechupete&#038;utm_medium=display&#038;utm_campaign=anuncio&#038;utm_content=branding"><img width="300" height="150" src="2021/04/GA_300x150-0421.jpg" class="image wp-image-40017  attachment-full size-full" alt="Pasta Garófalo" loading="lazy" style="max-width: 100%; height: auto;" /></a></div><div id="media_image-5" class="widget widget_media_image"><a href="https://www.arrozsos.es/?utm_source=derechupete&#038;utm_medium=display&#038;utm_campaign=anuncio&#038;utm_content=branding"><img width="300" height="150" src="2018/05/SOS_MejoresRecetas_300x150.gif" class="image wp-image-21592  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" /></a></div><div id="media_image-2" class="widget widget_media_image"><a href="http://www.galiciacalidade.gal/"><img width="300" height="150" src="2016/09/GaliciaCalidadePremiosVino_Banner_300x150castellano.gif" class="image wp-image-17532  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" /></a></div><div id="media_image-9" class="widget widget_media_image"><a href="https://www.eggo.es/"><img width="300" height="150" src="2021/06/banner-branding-300x150-recetas-de-rechupete.gif" class="image wp-image-41630  attachment-full size-full" alt="Eggo cocinas" loading="lazy" style="max-width: 100%; height: auto;" /></a></div>    
+</div>
+</aside></div>
+
+<aside>
+  <div id="aboutmod" class="rdr-content pure-g rdr-double-top">
+    		<div class="pure-u-1 pure-u-lg-1-3">
+			<div id="nav_menu-6" class="widget widget_nav_menu"><h3 class="widget-title">Las mejores recetas</h3><div class="menu-modulos-mejores-recetas-container"><ul id="menu-modulos-mejores-recetas" class="menu"><li id="menu-item-33614" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33614"><a href="https://www.#/receta-de-albondigas-en-salsa/15542/">Albóndigas en salsa</a></li>
+<li id="menu-item-33615" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33615"><a href="https://www.#/como-preparar-churros-caseros-receta-paso-a-paso/9752/">Cómo hacer churros</a></li>
+<li id="menu-item-33616" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33616"><a href="https://www.#/como-preparar-cordero-al-horno-o-asado-receta-facil/8629/">Cordero al horno o asado</a></li>
+<li id="menu-item-33617" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33617"><a href="https://www.#/receta-de-abuela-guiso-de-ternera-con-patatas/1336/">Estofado de ternera</a></li>
+<li id="menu-item-33618" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33618"><a href="https://www.#/como-hacer-guacamole-mexicano-receta-facil-y-rapida/9261/">Guacamole mexicano fácil</a></li>
+<li id="menu-item-33619" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33619"><a href="https://www.#/receta-de-lasana-de-carne/223/">Lasaña de carne</a></li>
+<li id="menu-item-33621" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33621"><a href="https://www.#/como-preparar-receta-masa-pizza-italiana/1728/">Masa de pizza italiana</a></li>
+<li id="menu-item-33622" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33622"><a href="https://www.#/pollo-al-curry-con-arroz-basmati-receta-paso-a-paso/8199/">Pollo al curry</a></li>
+<li id="menu-item-33636" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33636"><a href="https://www.#/fideua-con-marisco/13578/">Fideuá de marisco y pescado</a></li>
+</ul></div></div>	  	</div>
+	  	<div class="pure-u-1 pure-u-lg-1-3">
+			<div id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">De temporada</h3><div class="menu-modulos-de-temporada-container"><ul id="menu-modulos-de-temporada" class="menu"><li id="menu-item-42984" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42984"><a href="https://www.#/como-preparar-el-mejor-pure-de-patata/14328/">Puré de patata casero y fácil</a></li>
+<li id="menu-item-42985" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42985"><a href="https://www.#/como-preparar-magdalenas-caseras-receta-paso-a-paso/7789/">Magdalenas caseras</a></li>
+<li id="menu-item-42986" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42986"><a href="https://www.#/receta-de-fabada-o-fabes-asturianas/982/">Fabada asturiana tradicional</a></li>
+<li id="menu-item-42988" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42988"><a href="https://www.#/como-preparar-cordero-al-horno-o-asado-receta-facil/8629/">Cordero al horno</a></li>
+<li id="menu-item-42987" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42987"><a href="https://www.#/patatas-asadas-o-al-horno-con-especias/11870/">Patatas asadas caseras</a></li>
+<li id="menu-item-42990" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42990"><a href="https://www.#/risotto-de-setas/11575/">Risotto de setas</a></li>
+<li id="menu-item-33657" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33657"><a href="https://www.#/como-hacer-un-mojito-cubano-perfecto/16486/">Cómo hacer el mojito perfecto</a></li>
+<li id="menu-item-43024" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43024"><a href="https://www.#/receta-facil-de-tarta-de-queso/158/">Tarta de queso</a></li>
+<li id="menu-item-43025" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43025"><a href="https://www.#/flan-de-quesitos-flan-sin-horno-facil-delicioso-y-barato/42871/">Flan de quesitos</a></li>
+</ul></div></div>	  	</div>
+	  	<div class="pure-u-1 pure-u-lg-1-3">
+			<div id="nav_menu-8" class="widget widget_nav_menu"><h3 class="widget-title">Recetas baratas</h3><div class="menu-modulos-top-recetas-baratas-container"><ul id="menu-modulos-top-recetas-baratas" class="menu"><li id="menu-item-33625" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33625"><a href="https://www.#/pollo-asado-facil-al-horno-con-patatas-panaderas/9535/">Pollo asado fácil</a></li>
+<li id="menu-item-33627" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33627"><a href="https://www.#/tortilla-de-patatas-espanola-receta-paso-a-paso/5182/">Tortilla de patatas</a></li>
+<li id="menu-item-33628" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33628"><a href="https://www.#/receta-de-lentejas-caseras-con-chorizo/939/">Lentejas con chorizo</a></li>
+<li id="menu-item-43023" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-43023"><a href="https://www.#/empanada-de-bonito-en-conserva/23074/">Empanada de atún</a></li>
+<li id="menu-item-33630" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33630"><a href="https://www.#/receta-de-arroz-con-pollo-y-verduras/581/">Arroz con pollo</a></li>
+<li id="menu-item-33623" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33623"><a href="https://www.#/bizcocho-casero-de-yogur/10463/">Bizcocho de yogurt</a></li>
+<li id="menu-item-33624" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33624"><a href="https://www.#/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/">Brownie de chocolate</a></li>
+<li id="menu-item-33626" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33626"><a href="https://www.#/receta-de-tortitas/11/">Tortitas o pancakes caseros</a></li>
+<li id="menu-item-33629" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33629"><a href="https://www.#/receta-de-humus-y-tahini-pure-de-garbanzos/3864/">Hummus o crema de garbanzos</a></li>
+</ul></div></div>	  	</div>
+      </div>
+</aside>
+
+<footer>
+  <div id="socialchannels">
+    <style>
+	#socialchannels ul {margin:0}
+	#socialchannels li {text-align:center;font-size:2em;line-height:100%;}
+	#socialchannels li a{color:#FFF;text-decoration:none;display:inline-block;width:100%;padding:0.5em 0;}
+	#socialchannels li a:hover{color:rgba(255,255,255,0.6);text-decoration:none;}
+	#socialchannels li a span {display:block; font-size:0.4em;line-height:100%;}
+
+	#facebookchannel{background-color:#3b5998}
+	#twitterchannel{background-color:#33BCEF}
+	#youtubechannel{background-color:#cc181e}
+	#pinterestchannel{background-color:#cb2027}
+	#instagramchannel{background-color:#517fa4}
+	#mailchannel{background-color:#87A8C9}
+
+</style>
+    <ul class="pure-g">
+      <li id="facebookchannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://www.facebook.com/recetasderechupetefanpage" rel="nofollow" title="Recetas de Rechupete en Facebook" target="_blank"><i class="icon-facebook"></i><span>830.000</span></a></li>
+      <li id="twitterchannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://twitter.com/derechupete" rel="nofollow" title="Recetas de Rechupete en Twitter" target="_blank"><i class="icon-twitter"></i><span>213.000</span></a></li>
+      <li id="youtubechannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://www.youtube.com/user/recetasderechupete?sub_confirmation=1" rel="nofollow" title="Recetas de Rechupete en Youtube" target="_blank"><i class="icon-youtube"></i><span>94.000</span></a></li>
+      <li id="instagramchannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://instagram.com/derechupete/" rel="nofollow" title="Recetas de Rechupete en Instagram" target="_blank"><i class="icon-instagram"></i><span>78.000</span></a></li>
+      <li id="pinterestchannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://www.pinterest.es/derechupete/" rel="nofollow" title="Recetas de Rechupete en Pinterest" target="_blank"><i class="icon-pinterest"></i><span>28.000</span></a></li>
+      <li id="mailchannel" class="pure-u-1-3 pure-u-lg-1-6"><a href="https://eepurl.com/7kyp5" rel="nofollow" title="Suscríbete por mail" target="_blank"><i class="icon-mail"></i><span>23.000</span></a></li>
+    </ul>
+  </div>
+  <div id="closepage" role="contentinfo">
+	  <p>&copy; 2009-2021 Recetas de rechupete - Todos los derechos reservados <a href="https://www.#/terminos-de-uso/">Términos de uso</a> · <a href="https://www.#/politica-de-cookies/">Política de privacidad</a> · <a href="https://www.#/politica-de-cookies-2/">Política de cookies</a> <br />
+      Diseñado por <a href="https://www.piensaenpixels.com/" target="_blank" rel="nofollow">PIENSA en PIXELS</a> · <a href="https://www.stackscale.com/es/" title="Cloud hosting con StackScale" target="_blank">Cloud hosting con StackScale</a></p>
+  </div>
+</footer>
+
+<style>.aawp .aawp-product--horizontal .aawp-product__description { display: block; }</style>
+        <script type='text/javascript' id='rating-form-js-js-extra'>
+/* <![CDATA[ */
+var rating_form_script = {"ajaxurl":"https:\/\/www.#\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='rating-form/assets/js/front.js@ver=1.5.9' id='rating-form-js-js'></script>
+<script type='text/javascript' src='marfeelpress/includes/base/src/resources/js/resizer.js@ver=5.8.1' id='mrf_resizer-js'></script>
+<script type='text/javascript' src='aawp/assets/dist/js/main.js@ver=3.16' id='aawp-js'></script>
+<script type='text/javascript' src='wp-embed.min.js@ver=5.8.1' id='wp-embed-js'></script>
+
+</body></html>
